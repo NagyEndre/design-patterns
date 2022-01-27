@@ -4,7 +4,7 @@
   "description": "Examples of design patterns",
   "main": "index.ts",
   "scripts": {
-    "start": "ts-node ./src/index.ts",
+    "start": "ts-node ./src/strategy/user.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Endre Nagy",
