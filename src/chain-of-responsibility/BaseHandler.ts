@@ -3,12 +3,12 @@ export interface Handler {
   setNext(h: Handler): void;
 }
 
-export class BaseHandler implements Handler {
+export abstract class BaseHandler implements Handler {
   protected nextHandler: Handler | null = null;
 
-  handle(arg: any): void {
+  handle(request: any): void {
     if (this.nextHandler !== null) {
-      this.nextHandler.handle(arg);
+      this.nextHandler.handle(request);
     }
   }
 

@@ -4,8 +4,8 @@ export class Authenticator extends BaseHandler {
   private readonly admin = "BATMAN";
   private readonly key = "BATCAVE";
 
-  handle(arg: any): void {
-    const { user, password } = arg;
+  handle(request: any): void {
+    const { user, password } = request;
 
     if ((user as string).toUpperCase() !== this.admin) {
       throw new Error("Access denied. Only the dark knight might enter.");
@@ -15,5 +15,7 @@ export class Authenticator extends BaseHandler {
     }
 
     console.log("Access granted. Welcome.");
+
+    this.nextHandler?.handle(request);
   }
 }
