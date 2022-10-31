@@ -6,14 +6,20 @@
   "scripts": {
     "start:strategy": "ts-node ./src/strategy/user.ts",
     "start:prototype": "ts-node ./src/prototype/client.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:cor": "jest ./chain-of-responsibility/client.test.ts"
   },
   "author": "Endre Nagy",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/jest": "^29.2.0",
+    "babel-jest": "^29.2.2",
     "ts-node": "^10.4.0"
   },
   "dependencies": {
+    "jest": "^29.2.2",
     "typescript": "^4.5.5"
   }
 }
