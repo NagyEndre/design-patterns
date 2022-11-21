@@ -4,8 +4,9 @@
   "description": "Examples of design patterns",
   "main": "index.ts",
   "scripts": {
-    "start:strategy": "ts-node ./src/strategy/user.ts",
-    "start:prototype": "ts-node ./src/prototype/client.ts",
+    "start:strategy": "ts-node ./src/patterns/behavioral/strategy/user.ts",
+    "start:prototype": "ts-node ./src/patterns/creational/prototype/client.ts",
+    "test": "jest .",
     "test:cor": "jest ./chain-of-responsibility/client.test.ts"
   },
   "author": "Endre Nagy",
